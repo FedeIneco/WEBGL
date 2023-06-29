@@ -59,11 +59,11 @@ a {
 }
 
 .enlacesMenu i {
-  margin-top: -6px;
   font-size: 1.2em;
+  color: #1d428a;
 }
 .textoMenu {
-  font-size: 1.5em;
+  font-size: 1.5em;  
   width: 20%;
 }
 .rectanguloAzul {
@@ -84,10 +84,37 @@ a {
 }
 
 .carrusel {
+  width: 100%;  
+  height: auto;
+  overflow: hidden;
+  margin:1rem 0;
+}
+
+.carrusel .slide-track{
+  display: flex;
+  animation: scroll 60s linear infinite;
+  -webkit-animation: scroll 60s linear infinite;
+  width: calc(200px * 14);
+}
+
+.carrusel .slide{
+  width: 200px;
+  margin-right: 10px;
+}
+
+.carrusel .slide img{
   width: 100%;
-  background: #1d428a;
-  height: 150px;
-  margin-bottom: 3rem;
+}
+
+@keyframes scroll{
+  0%{
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100%{
+    -webkit-transform: translateX(calc(-200px * 7));
+    transform: (calc((-200px * 7)));
+  }
 }
 .card {
   position: relative;
@@ -102,7 +129,7 @@ a {
   padding: 1rem;
 }
 
-#unity-container{
+#unity-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -152,7 +179,7 @@ a {
   background: url("progress-bar-full-dark.png") no-repeat center;
 }
 #unity-footer {
-  width: 960px;  
+  width: 960px;
   position: relative;
   display: flex;
   justify-content: space-between;

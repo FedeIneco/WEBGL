@@ -155,7 +155,7 @@ a {
   width: 960px;  
   position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .unity-mobile #unity-footer {
   display: none;

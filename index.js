@@ -1,4 +1,4 @@
-const slideTrack = document.querySelector('.carrusel .slide-track');
+const slideTrack = document.querySelector('.carrusel');
 const menuFerias = document.getElementById('menuFerias');
 const menuEventos = document.getElementById('menuEventos');
 const menuVRV = document.getElementById('menuVRV');
@@ -8,29 +8,17 @@ const vrv = document.getElementById('vrv');
 const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
 
-let slideIndex = 0;
-const slideWidth = 200;
-const numSlides = document.querySelectorAll('.slide').length/2;
-
-prevButton.addEventListener('click', () => {
-    console.log("click");
-    slideIndex = (slideIndex - 1 + numSlides) % numSlides;
-    updateSlideTrackPosition();
+// Evento del botón anterior
+prevButton.addEventListener('click', () => {  
+  slideTrack.scrollLeft -= 200;
+  // slideTrack.style.transform = `translateX(0px)`;
 });
 
+// Evento del botón siguiente
 nextButton.addEventListener('click', () => {
-  console.log("hola");
-  slideIndex = (slideIndex + 1) % numSlides;
-  updateSlideTrackPosition();
+  slideTrack.scrollLeft += 200;
+  // slideTrack.style.transform = `translateX(-200px * 7)`;
 });
-
-function updateSlideTrackPosition() {
-  const slideMargin = 10; // Margen entre las diapositivas
-  const trackPosition = -(slideWidth + slideMargin) * slideIndex;
-  console.log(trackPosition);
-  console.log(slideIndex);
-  slideTrack.style.transform = `translateX(${trackPosition}px)`;
-}
 
 
 ferias.addEventListener('click', () =>{

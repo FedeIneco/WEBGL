@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+/* 
+body{
+  font-family: ;
+} */
 ul,
 li {
   list-style: none;
@@ -38,7 +42,8 @@ a {
   border-radius: 0.25rem;
 }
 
-.list-group-item {
+.list-group-item,
+.second-list-group-item {
   position: relative;
   display: block;
   padding: 0.75rem 1.25rem;
@@ -56,6 +61,7 @@ a {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: .7rem;
 }
 
 .enlacesMenu i {
@@ -64,7 +70,7 @@ a {
 }
 .textoMenu {
   font-size: 1.5em;  
-  width: 20%;
+  width: 50%;
 }
 .rectanguloAzul {
   width: 42%;
@@ -84,10 +90,27 @@ a {
 }
 
 .carrusel {
-  width: 100%;  
+  width: 97%;  
   height: auto;
   overflow: hidden;
   margin:1rem 0;
+}
+
+.carrusel button {
+  position: absolute;
+  top: 24%;  
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #1d428a;
+}
+.prev {
+  left: 24%;
+}
+
+.next {
+  right: 10px;
 }
 
 .carrusel .slide-track{
@@ -214,4 +237,19 @@ a {
   background: white;
   padding: 10px;
   display: none;
+}
+
+.oculto{
+  display: none;  
+}
+.second-list-group-item{
+  font-size: .8em;
+  padding: .5rem;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  
+}
+.second-list-group-item:last-child{
+  border: none;
 }

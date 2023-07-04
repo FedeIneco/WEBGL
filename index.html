@@ -17,18 +17,32 @@
     <div class="menu">
       <nav id="sidebar">
         <ul class="list-group">
-          <li class="list-group-item"><a class="enlacesMenu" href="#"> <span class="textoMenu">Primero</span>
+          <li class="list-group-item"><a class="enlacesMenu" id="ferias" href="#"> <span class="textoMenu">Ferias</span>
               <div class="rectanguloAzul"></div> <i class="fas fa-caret-down"></i>
-            </a></li>
-          <li class="list-group-item"><a class="enlacesMenu" href="#"> <span class="textoMenu">Segundo</span>
+            </a>
+            <ul class="list-group oculto" id="menuFerias">
+              <li class="second-list-group-item"><a href=""><span>Passengers Terminal 2023</span></a></li>
+              <li class="second-list-group-item"><a href=""><span>World ATM Congress 2022</span></a></li>
+            </ul>
+          </li>
+          <li class="list-group-item"><a class="enlacesMenu" id="eventos" href="#"> <span
+                class="textoMenu">Eventos</span>
               <div class="rectanguloAzul"></div> <i class="fas fa-caret-down"></i>
-            </a></li>
-          <li class="list-group-item"><a class="enlacesMenu" href="#"> <span class="textoMenu">Tercero</span>
+            </a>
+            <ul class="list-group oculto" id="menuEventos">
+              <li class="second-list-group-item"><a href=""> <span>III Semana de la Igualdad en INECO</span></a></li>
+            </ul>
+          </li>
+          <li class="list-group-item"><a class="enlacesMenu" id="vrv" href="#"> <span class="textoMenu">Visitas VR</span>
               <div class="rectanguloAzul"></div> <i class="fas fa-caret-down"></i>
-            </a></li>
-          <li class="list-group-item"><a class="enlacesMenu" href="#"> <span class="textoMenu">Cuarto</span>
+            </a>
+            <ul class="list-group oculto" id="menuVRV">
+              <li class="second-list-group-item"><a href=""><span>Línea Ferroviaria Gran Canaria</span></a></li>
+            </ul>
+          </li>
+          <!-- <li class="list-group-item"><a class="enlacesMenu" href="#"> <span class="textoMenu">Cuarto</span>
               <div class="rectanguloAzul"></div> <i class="fas fa-caret-down"></i>
-            </a></li>
+            </a></li> -->
         </ul>
       </nav>
     </div>
@@ -40,6 +54,8 @@
       </div>
       <div class="row">
         <div class="carrusel">
+          <button class="prev"><i class="fas fa-chevron-left"></i></button>
+          <button class="next"><i class="fas fa-chevron-right"></i></button>
           <div class="slide-track">
             <div class="slide">
               <img src="img/1.svg" alt="">
@@ -87,7 +103,7 @@
         </div>
       </div>
       <div class="card">
-        <div id="unity-container" class="unity-desktop" >
+        <div id="unity-container" class="unity-desktop">
           <canvas id="unity-canvas" width=960 height=600></canvas>
           <div id="unity-loading-bar">
             <div id="unity-logo"></div>
@@ -98,7 +114,7 @@
           <div id="unity-warning"> </div>
           <div id="unity-footer">
             <div id="unity-webgl-logo"></div>
-            <div id="unity-fullscreen-button"></div>            
+            <div id="unity-fullscreen-button"></div>
           </div>
         </div>
       </div>
@@ -197,6 +213,7 @@
       };
       document.body.appendChild(script);
     </script>
+    <script src="index.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,41 @@
+<script type="text/javascript">
+    window.onload = function () {
+        setTimeout(function () {
+            var searchElements = document.querySelectorAll("#elementor-search-form-dcbee94");
+            var submitElements = document.querySelectorAll(".buscador .elementor-search-form__submit");
+            var locateElements = document.querySelectorAll("#locate");
+
+            for (var i = 0; i < searchElements.length; i++) {
+                searchElements[i].id = i === 0 ? "search" : "search" + i;
+            }
+
+            for (var i = 0; i < submitElements.length; i++) {
+                submitElements[i].id = i === 0 ? "submit" : "submit" + i;
+            }
+
+            for (var i = 0; i < locateElements.length; i++) {
+                locateElements[i].id = i === 0 ? "locate" : "locate" + i;
+            }
+        });
+    };
+</script>
+<script type="text/javascript">
+    (function (p, a, r, t, oo, s, l) {
+        p['PartooSL'] = t; p[t] = p[t] || function () {
+            (p[t].q = p[t].q || []).push(Array.from(arguments));
+        }; l = a.createElement(r),
+            l.async = 1; l.src = oo; if (s) { l.crossOrigin = s; } s = a.getElementsByTagName(r)[0];
+        s.parentNode.insertBefore(l, s);
+    })(window, document, 'script', 'partoo', 'https://clinicas.moonz.com/js/widget.js?locale=es');
+</script>
+
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function () {
+    (async function () {
+        await partoo('form', '#search', '#submit', '#locate');
+        await partoo('form', '#search1', '#submit1', '#locate1');
+        await partoo('form', '#search2', '#submit2', '#locate2');
+    })();
+});
+
+</script>

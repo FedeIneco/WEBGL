@@ -126,8 +126,8 @@ a {
 
 .carrusel .slide-track{
   display: flex;
-  animation: scroll 60s linear infinite;
-  -webkit-animation: scroll 60s linear infinite;
+  animation: scroll 10s linear ;
+  -webkit-animation: scroll 10s linear ;
   width: calc(200px * 14);
 }
 
@@ -141,6 +141,18 @@ a {
 }
 
 @keyframes scroll{
+  100%{
+    -webkit-transform: translateX(calc(-200px * 7));
+    transform: translateX(calc((-200px * 7)));
+  }
+}
+
+.endScroll{
+  animation: end 1s linear ;
+  -webkit-animation: end 1s linear ;
+}
+
+@keyframes end {
   0%{
     -webkit-transform: translateX(0);
     transform: translateX(0);
@@ -150,13 +162,6 @@ a {
     transform: translateX(calc((-200px * 7)));
   }
 }
-
-
-.endScroll{
-  -webkit-transform: translateX(calc(-200px * 7));
-  transform: translateX(calc((-200px * 7)));
-}
-
 .card {
   position: relative;
   display: flex;

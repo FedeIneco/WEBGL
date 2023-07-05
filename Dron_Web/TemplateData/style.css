@@ -147,9 +147,16 @@ a {
   }
   100%{
     -webkit-transform: translateX(calc(-200px * 7));
-    transform: (calc((-200px * 7)));
+    transform: translateX(calc((-200px * 7)));
   }
 }
+
+
+.endScroll{
+  -webkit-transform: translateX(calc(-200px * 7));
+  transform: translateX(calc((-200px * 7)));
+}
+
 .card {
   position: relative;
   display: flex;

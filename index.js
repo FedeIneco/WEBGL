@@ -1,4 +1,4 @@
-const slideTrack = document.querySelector('.carrusel');
+const slideTrack = document.querySelector('.slide-track');
 const menuFerias = document.getElementById('menuFerias');
 const menuEventos = document.getElementById('menuEventos');
 const menuVRV = document.getElementById('menuVRV');
@@ -9,15 +9,21 @@ const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
 
 // Evento del botón anterior
-prevButton.addEventListener('click', () => {  
-  slideTrack.scrollLeft -= 200;
-  // slideTrack.style.transform = `translateX(0px)`;
+prevButton.addEventListener('click', () => {    
+  slideTrack.style.animation = `none`;
+  setTimeout(() => {
+    slideTrack.style.animation = `scroll 60s linear infinite`;
+  }, 0);  
 });
 
 // Evento del botón siguiente
 nextButton.addEventListener('click', () => {
-  slideTrack.scrollLeft += 200;
-  // slideTrack.style.transform = `translateX(-200px * 7)`;
+  slideTrack.style.animation = `none`;
+  slideTrack.classList.add('endScroll');
+  setTimeout(() => {
+    slideTrack.style.animation = `scroll 60s linear infinite`;
+  }, 0);  
+
 });
 
 

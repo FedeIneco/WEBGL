@@ -21,6 +21,7 @@ nextButton.addEventListener('click', () => {
   slideTrack.style.animation = `none`;
   slideTrack.classList.add('endScroll');
   setTimeout(() => {
+    slideTrack.classList.remove('endScroll');
     slideTrack.style.animation = `scroll 60s linear infinite`;
   }, 0);  
 

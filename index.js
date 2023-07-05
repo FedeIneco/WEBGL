@@ -7,6 +7,9 @@ const eventos = document.getElementById('eventos');
 const vrv = document.getElementById('vrv');
 const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
+const iconoFerias = document.getElementById('iconoFerias');
+const iconoEventos = document.getElementById('iconoEventos');
+const iconoVRV = document.getElementById('iconoVRV');
 
 // Evento del botón anterior
 prevButton.addEventListener('click', () => {    
@@ -30,13 +33,17 @@ nextButton.addEventListener('click', () => {
 
 ferias.addEventListener('click', () =>{
   menuFerias.classList.toggle('oculto');
+  iconoFerias.classList.toggle('cambioIcono');
+  
 })
 
 eventos.addEventListener('click', () =>{
   menuEventos.classList.toggle('oculto');
+  iconoEventos.classList.toggle('cambioIcono');
 })
 
 vrv.addEventListener('click', () =>{
   menuVRV.classList.toggle('oculto');
+  iconoVRV.classList.toggle('cambioIcono');
 })
 

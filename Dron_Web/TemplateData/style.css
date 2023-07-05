@@ -126,8 +126,8 @@ a {
 
 .carrusel .slide-track{
   display: flex;
-  animation: scroll 10s linear ;
-  -webkit-animation: scroll 10s linear ;
+  animation: scroll 60s linear infinite;
+  -webkit-animation: scroll 60s linear infinite;
   width: calc(200px * 14);
 }
 
@@ -141,6 +141,7 @@ a {
 }
 
 @keyframes scroll{
+
   100%{
     -webkit-transform: translateX(calc(-200px * 7));
     transform: translateX(calc((-200px * 7)));
